@@ -163,6 +163,61 @@ $main-left-bigger: 155px;
                 font-size: 24px;
                 font-weight: 600;
             }
+
+            .hobbies{
+                margin-top: 10%;
+                display: flex;
+                flex-direction: row;
+                gap: 150px;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 500px;
+
+                .hobbie{
+                    width: 100px;
+                    height: 100px;
+                    transform: rotate(45deg);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    transition: all .2s ease-out;
+                    border: 1px solid rgba(255,255,255, .3);
+                    .hobbie-title{
+                        text-align: center;
+                        position: absolute;
+                        transform: rotate(-45deg);
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                    .hobbie-creatif{
+                        top: 110px;
+                        left: 90px;
+                    }
+                    .hobbie-ekip{
+                        top: 100px;
+                        left: 85px;
+                    }
+                    .hobbie-game{
+                        top: 105px;
+                        left: 85px;
+                    }
+                    .hobbie-people{
+                        top: 105px;
+                        left: 75px;
+                    }
+
+                    i{
+                        font-size: 28px;
+                        rotate: -45deg;
+                    }
+                }
+                .hobbie:hover{
+                    width: 110px;
+                    height: 110px;
+                }
+            }
         }
        
     }
