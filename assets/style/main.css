@@ -2,6 +2,16 @@ h2 {
   text-decoration: underline;
 }
 
+@keyframes slide {
+  from {
+    transform: translateX(-100%) translate(-50%, -50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%) translate(-50%, -50%);
+    opacity: 1;
+  }
+}
 .main {
   width: 1500px;
   height: calc(100vh - 60px);
@@ -31,12 +41,17 @@ h2 {
   height: 10%;
 }
 .main-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   font-size: 25px;
   white-space: pre;
   transition: scale 0.3s;
   font-weight: bold;
   text-decoration: underline;
+  animation: 2s ease-out slide;
 }
 .main-content-home {
   width: 100%;

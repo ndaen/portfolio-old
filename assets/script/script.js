@@ -45,6 +45,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
     for (let i = 0; i < pages.length; i++) {
       if (this.getAttribute("value") === pages[i].dataset.page) {
+        
         pages[i].classList.add("active");
         window.scrollTo(0, 0);
       } else {
