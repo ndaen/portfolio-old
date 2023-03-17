@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body, html {
@@ -33,8 +35,7 @@ body {
   top: 60px;
   left: 0;
   border-radius: 50%;
-  -webkit-animation: shadow324 0.5s linear infinite;
-          animation: shadow324 0.5s linear infinite;
+  animation: shadow324 0.5s linear infinite;
 }
 
 .loader:after {
@@ -46,8 +47,7 @@ body {
   top: 0;
   left: 0;
   border-radius: 4px;
-  -webkit-animation: jump7456 0.5s linear infinite;
-          animation: jump7456 0.5s linear infinite;
+  animation: jump7456 0.5s linear infinite;
 }
 
 .separator {
