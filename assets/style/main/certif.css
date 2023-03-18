@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 24px;
 }
 .certifs-content .certifs .certif h5 {
   margin: 0;

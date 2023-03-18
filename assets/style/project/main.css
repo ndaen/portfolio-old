@@ -1,0 +1,122 @@
+h2, h3 {
+  text-decoration: underline;
+  letter-spacing: 0.03rem;
+  margin-bottom: 10px;
+}
+
+img {
+  aspect-ratio: 16/9;
+  height: 425px;
+  padding: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+}
+
+.main {
+  width: 1500px;
+  height: calc(100vh - 60px);
+  position: absolute;
+  left: 400px;
+  top: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 40px -20px black;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  color: white;
+  text-shadow: 1px 1px 0 black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s;
+}
+.main-large {
+  width: 1740px;
+  left: 155px;
+}
+.main .top {
+  background-color: transparent;
+  width: 100%;
+  min-height: 100px;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  position: relative;
+}
+.main .top .title {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-decoration: underline;
+}
+.main .center {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.main .center .content {
+  width: calc(100% - 50px);
+  margin-left: 25px;
+  min-height: calc(100vh - 160px);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.main .center .content img {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 50px;
+}
+.main .center .content .informations {
+  height: 425px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+.main .center .content .informations .information {
+  height: 75px;
+  width: 300px;
+}
+.main .center .content .informations .information h3 {
+  display: flex;
+  gap: 10px;
+}
+.main .center .content .informations .information .border {
+  position: relative;
+  aspect-ratio: 1/1;
+  width: 25px;
+  max-height: 25px;
+  border-radius: 50px;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+}
+.main .center .content .informations .information .border .point {
+  position: absolute;
+  aspect-ratio: 1/1;
+  width: 15px;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  background-color: white;
+  z-index: 1;
+}
+.main .center .content .description {
+  width: 120%;
+  margin-left: 50px;
+}
+.main .center .presentation h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.main .center .presentation .part-one img {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 50px;
+}/*# sourceMappingURL=main.css.map */

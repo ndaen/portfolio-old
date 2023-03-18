@@ -1,3 +1,5 @@
+const Shuffle = window.Shuffle
+
 const sidebar = document.querySelector('.sidebar')
 const sidebarToogleBtn = document.querySelector('.sidebar-toggle')
 const main = document.querySelector('.main')
@@ -55,3 +57,10 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// const filter = document.getElementById('project-filter')
+// filter.childNodes.forEach(element => {
+//   if(element == HTMLElement.){
+//     console.log(element)
+//   }
+// })

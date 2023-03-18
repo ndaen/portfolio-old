@@ -1,0 +1,139 @@
+$main-bigger-width: 1740px;
+$main-width: 1500px;
+$main-left: 400px;
+$main-left-bigger: 155px;
+
+h2, h3{
+    text-decoration: underline;
+    letter-spacing: .03rem;
+    margin-bottom: 10px;
+}
+img{
+    aspect-ratio: 16/9;
+    height: 425px;
+    padding: 10px;
+    border: 2px solid rgba(255,255,255, .3);
+    border-radius: 20px;
+}
+.main{
+    $main: &;
+    width: $main-width;
+    height: calc(100vh - 60px);
+    position: absolute;
+    left: $main-left;
+    top: 30px;
+    border: 1px solid rgba(255,255,255, .3);
+    box-shadow: 0 0 40px -20px black;
+    backdrop-filter: blur(10px);
+    color: white;
+    text-shadow: 1px 1px 0 black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all .3s;
+    &-large{
+        width: $main-bigger-width;
+        left: $main-left-bigger;
+    }
+
+    .top{
+        background-color: transparent;
+        width: 100%;
+        min-height: 100px;
+        border-radius: 10px 10px 0 0;
+        border-bottom: 1px solid rgba(255,255,255, .3);
+        text-align: center;
+        position: relative;
+        .title{
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            text-decoration: underline;
+        }
+    }
+
+    .center{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        .content{
+            width: calc(100% - 50px);
+            margin-left: 25px;
+            min-height:  calc(100vh - 160px);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            img{
+                margin-top: auto;
+                margin-bottom: auto;
+                margin-left: 50px;
+            }
+            .informations{
+                height: 425px;
+                margin-top: auto;
+                margin-bottom: auto;
+                margin-left: 200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 50px;
+                .information{
+                    height: 75px;
+                    width: 300px;
+                    h3{
+                        display: flex;
+                        gap: 10px;
+                    }
+                    .border{
+                        position: relative;
+                        aspect-ratio: 1/1;
+                        width: 25px;
+                        max-height: 25px;
+                        border-radius: 50px;
+                        z-index: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 1px solid #fff;
+
+                        .point{
+                            position: absolute;
+                            aspect-ratio: 1/1;
+                            width: 15px;
+                            border-radius: 50px;
+                            border: 2px solid transparent;
+                            background-color: white;
+                            z-index: 1;
+                        }
+                    }
+                }
+            }
+
+            .description{
+                width: 120%;
+                margin-left: 50px;
+            }
+        }
+
+        .presentation{
+            h2{
+                text-align: center;
+                margin-bottom: 50px;
+            }
+
+            .part-one{
+                img{
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    margin-left: 50px;
+                }
+            }
+
+        }
+
+    }
+}
