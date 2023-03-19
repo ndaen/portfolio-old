@@ -63,6 +63,14 @@ let project = document.querySelectorAll("#project-item")
 let project2 = project
 for (let i = 0; i < filter.length; i++){
   filter[i].addEventListener("click", function() {
+    
+    for(let k = 0; k <filter.length; k++){
+      if(filter[k] != filter[i]){
+        filter[k].classList.remove('active')
+      }else{
+        filter[k].classList.add('active')
+      }
+    }
 
     for(let j =0; j < project.length; j++){
       dataGrp = project[j].getAttribute('data-group')

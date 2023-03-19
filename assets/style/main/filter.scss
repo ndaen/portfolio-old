@@ -36,6 +36,9 @@
             text-decoration: none;
             color: white;
         }
+        a.active{
+            text-decoration: underline;
+        }
     }
 }
 #project-grid{
@@ -61,7 +64,6 @@
         justify-content: center;
         gap: 20px;
         opacity: 1;
-        transition: all .3s ;
         animation: appear .3s ease-in;
         img{
             width: fit-content;
