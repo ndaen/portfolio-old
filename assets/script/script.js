@@ -58,9 +58,28 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-// const filter = document.getElementById('project-filter')
-// filter.childNodes.forEach(element => {
-//   if(element == HTMLElement.){
-//     console.log(element)
-//   }
-// })
+const filter = document.querySelectorAll("[data-filter-link]")
+let project = document.querySelectorAll("#project-item")
+let project2 = project
+for (let i = 0; i < filter.length; i++){
+  filter[i].addEventListener("click", function() {
+
+    for(let j =0; j < project.length; j++){
+      dataGrp = project[j].getAttribute('data-group')
+      if (filter[i].getAttribute('value') == 'all'){
+        project[j].classList.add('project-item-active')
+        project[j].classList.remove('project-item-disactive')
+      }else{
+        if (dataGrp != filter[i].getAttribute('value')){
+        project[j].classList.add('project-item-disactive')
+        project[j].classList.remove('project-item-active')
+      }else{
+        project[j].classList.add('project-item-active')
+        project[j].classList.remove('project-item-disactive')
+      }
+      }
+      
+    }
+
+  })
+}

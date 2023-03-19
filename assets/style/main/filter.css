@@ -1,3 +1,19 @@
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 #projet > .center {
   display: flex;
   flex-direction: column;
@@ -24,7 +40,14 @@
   grid-column-gap: 5px;
   grid-row-gap: 5px;
 }
-#project-grid .project-item {
+#project-grid .project-item-disactive {
+  display: none;
+  animation: disappear 0.3s ease-in;
+}
+#project-grid .project-item-disactive > * {
+  display: none;
+}
+#project-grid .project-item-active {
   border: solid 1px rgba(255, 255, 255, 0.3);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 24px;
   display: flex;
@@ -32,13 +55,16 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  opacity: 1;
+  transition: all 0.3s;
+  animation: appear 0.3s ease-in;
 }
-#project-grid .project-item img {
+#project-grid .project-item-active img {
   width: -moz-fit-content;
   width: fit-content;
   height: 80px;
 }
-#project-grid .project-item .project-content {
+#project-grid .project-item-active .project-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,17 +76,17 @@
   transition: all 0.3s ease;
   position: absolute;
 }
-#project-grid .project-item .project-content * {
+#project-grid .project-item-active .project-content * {
   transform: translateY(-70%);
   transition: all 0.3s ease;
   opacity: 0;
 }
-#project-grid .project-item .project-content h2 {
+#project-grid .project-item-active .project-content h2 {
   font-size: 25px;
   margin: 15px;
   font-weight: 700;
 }
-#project-grid .project-item .project-content a {
+#project-grid .project-item-active .project-content a {
   font-size: 25px;
   aspect-ratio: 1/1;
   width: 50px;
@@ -69,17 +95,17 @@
   transform: rotate(45deg);
   transition: all 0.3s;
 }
-#project-grid .project-item .project-content a i {
+#project-grid .project-item-active .project-content a i {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
   transition: all 0.3s;
 }
-#project-grid .project-item:hover .project-content {
+#project-grid .project-item-active:hover .project-content {
   opacity: 1;
 }
-#project-grid .project-item:hover .project-content * {
+#project-grid .project-item-active:hover .project-content * {
   opacity: 1;
 }
 #project-grid .project-content a:hover {

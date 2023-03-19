@@ -1,3 +1,21 @@
+@keyframes appear {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes disappear {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
 
 #projet > .center{
     display: flex;
@@ -27,7 +45,14 @@
     grid-column-gap: 5px;
     grid-row-gap: 5px;
 
-    .project-item{
+    .project-item-disactive{
+        display: none;
+        animation: disappear .3s ease-in;
+    }
+    .project-item-disactive > *{
+        display: none;
+    }
+    .project-item-active{
         border: solid 1px rgba($color: #fff, $alpha: .3);
         box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 24px;
         display: flex;
@@ -35,6 +60,9 @@
         align-items: center;
         justify-content: center;
         gap: 20px;
+        opacity: 1;
+        transition: all .3s ;
+        animation: appear .3s ease-in;
         img{
             width: fit-content;
             height: 80px;
@@ -80,11 +108,11 @@
         }
 
     }
-    .project-item:hover .project-content{
+    .project-item-active:hover .project-content{
         opacity: 1;
     }
 
-    .project-item:hover .project-content *{
+    .project-item-active:hover .project-content *{
         opacity: 1;
     }
 
