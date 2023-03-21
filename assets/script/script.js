@@ -6,7 +6,7 @@ const last = document.querySelector('.container.last')
 const right = document.querySelectorAll('.container.right')
 const timeline_title = document.querySelectorAll('.timeline-title')
 
-if(window.location.pathname === '/' | window.location.pathname === '/index.html' | window.location.pathname === '/portoflio/' | window.location.pathname === '/portoflio/index.html'){
+// if(window.location.pathname === '/' | window.location.pathname === '/index.html' | window.location.pathname === '/portoflio/' | window.location.pathname === '/portoflio/index.html'){
 
   sidebarToogleBtn.onclick = (e) => {
     e.preventDefault()
@@ -35,7 +35,7 @@ if(window.location.pathname === '/' | window.location.pathname === '/index.html'
   //         left.classList.remove('left-big')
   //     }
   // }
-}
+// }
 
 
 
@@ -54,7 +54,7 @@ const pages = document.querySelectorAll("[data-page]");
 //   }
 // }
 
-if(window.location.pathname === '/' | window.location.pathname === '/index.html' | window.location.pathname === '/portoflio/' | window.location.pathname === '/portoflio/index.html'){
+// if(window.location.pathname === '/' | window.location.pathname === '/index.html' | window.location.pathname === '/portoflio/' | window.location.pathname === '/portoflio/index.html'){
   // add event to all nav link
   for (let i = 0; i < navigationLinks.length; i++) {
 
@@ -72,9 +72,9 @@ if(window.location.pathname === '/' | window.location.pathname === '/index.html'
 
     });
   }
-}
+// }
 
-if(window.location.pathname === '/' | window.location.pathname === '/index.html' | window.location.pathname === '/portoflio/' | window.location.pathname === '/portoflio/index.html'){
+// if(window.location.pathname === '/' | window.location.pathname === '/index.html' | window.location.pathname === '/portoflio/' | window.location.pathname === '/portoflio/index.html'){
   const filter = document.querySelectorAll("[data-filter-link]")
   let project = document.querySelectorAll("#project-item")
   let project2 = project
@@ -110,4 +110,4 @@ if(window.location.pathname === '/' | window.location.pathname === '/index.html'
   
     })
   }
-}
+// }
