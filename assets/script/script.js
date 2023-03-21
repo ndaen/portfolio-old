@@ -43,16 +43,16 @@ if(window.location.pathname === '/' | window.location.pathname === '/index.html'
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-if(document.referrer !==  window.location.href){
-  for (let j = 0; j < pages.length; j++) {
-    if ( 'projets' === pages[j].dataset.page) {
-      pages[j].classList.add("active");
-      window.scrollTo(0, 0);
-    } else {
-      pages[j].classList.remove("active");
-    }
-  }
-}
+// if(document.referrer !==  window.location.href){
+//   for (let j = 0; j < pages.length; j++) {
+//     if ( 'projets' === pages[j].dataset.page) {
+//       pages[j].classList.add("active");
+//       window.scrollTo(0, 0);
+//     } else {
+//       pages[j].classList.remove("active");
+//     }
+//   }
+// }
 
 if(window.location.pathname === '/' | window.location.pathname === '/index.html' | window.location.pathname === '/portoflio/' | window.location.pathname === '/portoflio/index.html'){
   // add event to all nav link
